@@ -1,4 +1,4 @@
-function rev-inbox -d "Revise the version of Mail or Calendar"
+function release-inbox -d "Release a new version of Mail or Calendar"
     argparse 'p/product=' -- $argv
 
     if not set -q _flag_product
