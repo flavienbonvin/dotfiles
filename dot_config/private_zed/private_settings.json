@@ -19,8 +19,8 @@
   },
   "ui_font_size": 15,
   "buffer_font_size": 15,
-  "ui_font_family": "Cartograph CF",
-  "buffer_font_family": "Cartograph CF",
+  "ui_font_family": "Ellograph CF",
+  "buffer_font_family": "Ellograph CF",
   "soft_wrap": "editor_width",
   "terminal": {
     "font_family": "FiraCode Nerd Font Mono"
@@ -28,6 +28,6 @@
   "theme": {
     "mode": "dark",
     "light": "Rosé Pine Dawn",
-    "dark": "One Dark Pro Monokai Darker"
+    "dark": "Rosé Pine"
   }
 }
