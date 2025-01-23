@@ -8,7 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "features": {
-    "inline_completion_provider": "supermaven"
+    "inline_completion_provider": "zed"
   },
   "assistant": {
     "default_model": {
