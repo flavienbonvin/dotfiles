@@ -9,17 +9,15 @@
     },
     "version": "2"
   },
-  "ui_font_size": 15,
-  "buffer_font_size": 15,
-  "ui_font_family": "Cartograph CF",
-  "buffer_font_family": "Cartograph CF",
+  "ui_font_family": "Zed Plex Mono",
+  "buffer_font_family": "Zed Plex Mono",
   "soft_wrap": "editor_width",
   "terminal": {
     "font_family": "FiraCode Nerd Font Mono"
   },
   "theme": {
-    "mode": "dark",
-    "light": "Rosé Pine Dawn",
-    "dark": "Aura Dark (Soft Text)"
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Dracula"
   }
 }
