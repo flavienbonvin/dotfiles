@@ -1,6 +1,3 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-current_hostname=$(hostname)
-if [[ "$current_hostname" == "MacBook-Pro-Work.local" ]]; then
-    export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
-fi
+export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
