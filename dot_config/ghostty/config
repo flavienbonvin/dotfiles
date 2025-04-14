@@ -1,5 +1,5 @@
 font-family = "Berkeley Mono"
-theme = light:catppuccin-latte,dark:catppuccin-frappe
+theme = catppuccin-frappe
 
 background-opacity = 0.90
 background-blur-radius = 40
