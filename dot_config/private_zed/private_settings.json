@@ -16,7 +16,7 @@
     "font_family": "Berkeley Mono"
   },
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Catppuccin Latte",
     "dark": "Catppuccin Frappé"
   }
