@@ -9,6 +9,7 @@
     },
     "version": "2"
   },
+  "tab_width": 4,
   "ui_font_family": "Berkeley Mono",
   "buffer_font_family": "Berkeley Mono",
   "soft_wrap": "editor_width",
@@ -18,6 +19,6 @@
   "theme": {
     "mode": "dark",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Frappé"
+    "dark": "Catppuccin Mocha"
   }
 }
