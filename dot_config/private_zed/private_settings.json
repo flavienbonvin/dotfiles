@@ -3,6 +3,8 @@
     "edit_prediction_provider": "zed"
   },
   "assistant": {
+    "default_profile": "ask",
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
@@ -14,7 +16,8 @@
   "buffer_font_family": "Berkeley Mono",
   "soft_wrap": "editor_width",
   "terminal": {
-    "font_family": "Berkeley Mono"
+    "font_family": "Berkeley Mono",
+    "font_fallbacks": ["FiraCode Nerd Font"]
   },
   "theme": {
     "mode": "dark",
