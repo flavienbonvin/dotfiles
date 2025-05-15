@@ -1,6 +1,6 @@
 function ts-clean -d 'Clean typescript caches'
     echo "Cleaning typescript caches"
-    rm -rf .turbo
+    rm -rf .turbo/.cache
     rm -f .eslintcache
 
     if not string match -q "/Users/fbonvin/Developer/*" (pwd)
