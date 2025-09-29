@@ -13,7 +13,7 @@
   "buffer_font_family": "Berkeley Mono",
   "soft_wrap": "editor_width",
   "terminal": {
-    "font_family": "FiraCode Nerd Font Mono"
+    "font_family": "Berkeley Mono"
   },
   "theme": {
     "mode": "system",
