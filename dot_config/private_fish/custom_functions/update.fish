@@ -9,7 +9,7 @@ function update -d 'Update system'
 
     echo \n'🐠 Updating fish'
     fisher update
-    fish_update_completions
+    fish fish_update_completions
 
     echo \n'🍎 Updating system'
     /usr/sbin/softwareupdate -ia
