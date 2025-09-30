@@ -14,7 +14,8 @@
     "buffer_font_family": "Cartograph CF",
     "soft_wrap": "editor_width",
     "terminal": {
-        "font_family": "Berkeley Mono"
+        "font_family": "Berkeley Mono",
+        "font_fallbacks": ["FiraCode Nerd Font Mono"]
     },
     "theme": {
         "mode": "system",
