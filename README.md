@@ -1,17 +1,19 @@
 My simple dotfile managed using stow.
 
-The installation is done using make file, one for personal and another for work laptop.
+## Commands available
 
-## How to use
+The following commands are available:
 
-To install on personal laptop:
+### Laptop configuration
 
-```bash
-make install
-```
+Will install packages and application, generate SSH keys, configure dotfiles.
 
-To install on work laptop:
+- `make configure-work`
+- `make configure-personal`
 
-```bash
-make install-work
-```
+### Dotfile management
+
+Will only install the dotfiles.
+
+- `make stow-personal`
+- `make stow-work`
