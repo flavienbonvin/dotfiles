@@ -1,0 +1,10 @@
+{
+    "useState": {
+        "prefix": "us",
+        "body": [
+            "const [${1:state}, set${2}${1:state}] = useState${4}(${3:initialValue});",
+            "$0"
+        ],
+        "description": "useState"
+    }
+}

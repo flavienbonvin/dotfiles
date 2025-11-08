@@ -1,0 +1,9 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+[memory_usage]
+disabled = false
+threshold = -1
+style = 'dimmed green'
+format = '$symbol [${ram}( | ${ram_pct})]($style) '

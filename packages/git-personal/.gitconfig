@@ -1,0 +1,12 @@
+[user]
+	name = Flavien Bonvin
+	email = flavien.bonvin@pm.me
+
+[pull]
+    rebase = true
+
+[push]
+    autoSetupRemote = true
+
+[core]
+    editor = zed --wait

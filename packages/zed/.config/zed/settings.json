@@ -1,0 +1,58 @@
+{
+    "tab_size": 4,
+    "soft_wrap": "editor_width",
+
+    "theme": {
+        "mode": "system",
+        "light": "Catppuccin Latte",
+        "dark": "Catppuccin Mocha"
+    },
+
+    "show_whitespaces": "trailing",
+
+    "ui_font_family": "Berkeley Mono",
+    "buffer_font_family": "Cartograph CF",
+
+    "terminal": {
+        "font_family": "Berkeley Mono",
+        "font_fallbacks": ["FiraCode Nerd Font Mono"]
+    },
+
+    "features": {
+        "edit_prediction_provider": "zed"
+    },
+
+    "agent": {
+        "always_allow_tool_actions": true,
+        "default_model": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-4-latest"
+        }
+    },
+
+    "format_on_save": "on",
+    "languages": {
+        "TypeScript": {
+            "code_actions_on_format": { "source.fixAll.eslint": true },
+            "formatter": "prettier"
+        },
+        "TSX": {
+            "code_actions_on_format": { "source.fixAll.eslint": true },
+            "formatter": "prettier"
+        },
+        "Make": {
+            "hard_tabs": true
+        }
+    },
+
+    "auto_install_extensions": {
+        "catppuccin": true,
+        "catppuccin-icons": true,
+
+        "fish": true,
+        "make": true,
+        "emmet": true,
+        "scss": true,
+        "html": true
+    }
+}
