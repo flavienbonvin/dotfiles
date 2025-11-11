@@ -1,0 +1,10 @@
+brew "mkcert"
+brew "nss"
+brew "haproxy"
+brew "pkg-config"
+
+cask "figma"
+cask "google-chrome"
+cask "google-chrome@canary"
+cask "slack"
+cask "zen"
