@@ -13,3 +13,9 @@
 
 [alias]
 	gsm = git switch main && git pull && git fetch --all && gclean
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
