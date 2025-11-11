@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if ! command -v stow &> /dev/null; then
     echo "🚨 GNU Stow is not installed!"

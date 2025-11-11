@@ -1,0 +1,35 @@
+tap "homebrew/bundle"
+tap "homebrew/services"
+
+brew "git"
+brew "wget"
+brew "curl"
+brew "bash"
+brew "imagemagick"
+brew "pngquant"
+
+brew "mas"
+
+brew "fish"
+brew "starship"
+
+cask "aldente"
+cask "appcleaner"
+cask "bartender"
+cask "cleanshot"
+cask "coconutbattery"
+cask "ghostty"
+cask "languagetool"
+cask "keyboardcleantool"
+cask "obsidian"
+cask "proton-drive"
+cask "refine"
+cask "signal"
+cask "spotify"
+cask "zed"
+cask "zoom"
+
+mas "Numbers", id: 409_203_825
+mas "Pages", id: 409_201_541
+mas "Keynote", id: 409_183_694
+mas "Things", id: 904_280_696
