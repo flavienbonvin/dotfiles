@@ -1,0 +1,7 @@
+font-family = "Berkeley Mono"
+theme = dark:Catppuccin Frappe,light:Catppuccin Latte
+
+background-opacity = 0.90
+background-blur-radius = 40
+
+macos-titlebar-style = tabs
