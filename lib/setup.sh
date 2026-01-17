@@ -24,4 +24,4 @@ printf "🥈 Configuring macos\n\n"
 ./lib/configure-macos.sh
 
 printf "🥉 Configuring dev stuff\n\n"
-./lib/ssh-key-$PROFILE.sh
+./lib/ssh-key.sh $PROFILE
