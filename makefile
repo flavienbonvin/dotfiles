@@ -15,9 +15,9 @@ stow-personal: check-stow
 	@stow -d $(PKG_DIR) -t ~ ghostty starship zed fish-common fish-personal git-personal ssh-personal zsh-personal
 
 configure-work: check-brew
-	@./lib/setup-work.sh
+	@./lib/setup.sh work
 	@$(MAKE) stow-work
 
 configure-personal: check-brew
-	@./lib/setup-personal.sh
+	@./lib/setup.sh personal
 	@$(MAKE) stow-personal
