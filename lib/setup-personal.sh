@@ -3,8 +3,8 @@
 printf "🌯 Configuring personal laptop\n\n"
 
 printf "🥇 Installing brew packages and casks\n\n"
-brew bundle --file=./brewfile-common
-brew bundle --file=./brewfile-personal
+brew bundle --file=./dependencies/brewfile-common
+brew bundle --file=./dependencies/brewfile-personal
 
 printf "🥈 Configuring macos\n\n"
 ./configure-macos.sh
