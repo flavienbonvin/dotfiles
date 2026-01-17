@@ -1,1 +1,3 @@
+brew "mole"
+
 cask "helium-browser"
