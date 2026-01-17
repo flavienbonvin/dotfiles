@@ -1,10 +1,10 @@
 PKG_DIR := packages
 
 check-stow:
-	@./lib/check-stow.sh
+	@./utils/check-stow.sh
 
 check-brew:
-	@./lib/check-brew.sh
+	@./utils/check-brew.sh
 
 stow-work: check-stow
 	echo "🚛 Stowing work packages"
