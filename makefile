@@ -1,5 +1,9 @@
 PKG_DIR := packages
 
+COMMON_PACKAGES := ghostty starship zed fish-common
+WORK_PACKAGES := fish-work git-work ssh-work zsh-work
+PERSONAL_PACKAGES := fish-personal git-personal ssh-personal zsh-personal
+
 check-stow:
 	@./utils/check-stow.sh
 
@@ -8,11 +12,11 @@ check-brew:
 
 stow-work: check-stow
 	echo "🚛 Stowing work packages"
-	@stow -d $(PKG_DIR) -t ~ ghostty starship zed fish-common fish-work git-work ssh-work zsh-work
+	@stow -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(WORK_PACKAGES)
 
 stow-personal: check-stow
 	echo "🚛 Stowing personal packages"
-	@stow -d $(PKG_DIR) -t ~ ghostty starship zed fish-common fish-personal git-personal ssh-personal zsh-personal
+	@stow -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(PERSONAL_PACKAGES)
 
 configure-work: check-brew
 	@./lib/setup.sh work
