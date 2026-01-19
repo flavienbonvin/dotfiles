@@ -10,6 +10,9 @@ brew "mas"
 brew "fish"
 brew "starship"
 
+brew "font-new-york"
+brew "font-sf-pro"
+
 cask "aldente"
 cask "appcleaner"
 cask "bartender"
