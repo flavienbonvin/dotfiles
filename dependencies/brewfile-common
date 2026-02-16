@@ -32,7 +32,8 @@ cask "spotify"
 cask "zed"
 cask "zoom"
 
-mas "Numbers", id: 409_203_825
-mas "Pages", id: 409_201_541
-mas "Keynote", id: 409_183_694
+mas "Numbers", id: 361_304_891
+mas "Pages", id: 361_309_726
+mas "Keynote", id: 361_285_480
 mas "Things", id: 904_280_696
+mas "GoodLinks", id: 1_474_335_294

@@ -1,8 +1,16 @@
 {
+    "agent_servers": {
+        "opencode": {
+            "type": "registry"
+        },
+        "mistral-vibe": {
+            "type": "registry"
+        }
+    },
     "tab_size": 4,
     "soft_wrap": "editor_width",
 
-    "theme": "Catppuccin Mocha",
+    "theme": "Catppuccin Latte",
 
     "show_whitespaces": "trailing",
 
@@ -14,17 +22,21 @@
         "font_fallbacks": ["FiraCode Nerd Font Mono"],
     },
 
-    "features": {
-        "edit_prediction_provider": "zed",
-    },
-
     "agent": {
         "default_profile": "write",
         "always_allow_tool_actions": true,
         "default_model": {
             "provider": "zed.dev",
-            "model": "gpt-5.2-codex",
+            "model": "claude-sonnet-4-5",
         },
+    },
+
+    "edit_predictions": {
+        "codestral": {
+            "api_url": "https://codestral.mistral.ai",
+            "max_tokens": 150,
+        },
+        "provider": "zed",
     },
 
     "format_on_save": "on",
