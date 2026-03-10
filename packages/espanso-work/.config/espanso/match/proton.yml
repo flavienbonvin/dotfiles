@@ -1,0 +1,5 @@
+# Configuration for work at Proton
+
+matches:
+    - trigger: ":user"
+      replace: "api/internal/quark"
