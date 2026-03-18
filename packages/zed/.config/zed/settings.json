@@ -24,10 +24,12 @@
 
     "agent": {
         "tool_permissions": {
-            "default": "allow"
+            "default": "allow",
         },
         "default_profile": "write",
         "default_model": {
+            "effort": "medium",
+            "enable_thinking": false,
             "provider": "zed.dev",
             "model": "claude-sonnet-4-6",
         },
@@ -53,6 +55,9 @@
         },
         "Make": {
             "hard_tabs": true,
+        },
+        "YAML": {
+            "tab_size": 2,
         },
     },
 
