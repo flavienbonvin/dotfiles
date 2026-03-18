@@ -1,4 +1,4 @@
 filter_exec: Zed
 
 extra_includes:
-    - "../match/_dev.yml"
+  - "../match/_dev.yml"
