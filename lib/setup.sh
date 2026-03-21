@@ -18,3 +18,6 @@ printf "🥈 Configuring macos\n\n"
 
 printf "🥉 Configuring dev stuff\n\n"
 ./lib/ssh-key.sh $PROFILE
+
+printf "4️⃣  Setting LSP server\n\n"
+./lib/install-lsp.sh
