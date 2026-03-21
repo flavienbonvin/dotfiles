@@ -10,6 +10,9 @@ check-stow:
 check-brew:
 	@./utils/check-brew.sh
 
+check-bun:
+	@./utils/check-bun.sh
+
 stow-work: check-stow
 	echo "🚛 Stowing work packages"
 	@stow -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(WORK_PACKAGES)
@@ -17,6 +20,9 @@ stow-work: check-stow
 stow-personal: check-stow
 	echo "🚛 Stowing personal packages"
 	@stow -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(PERSONAL_PACKAGES)
+
+install-lsp: check-bun
+	@./lib/install-lsp.sh
 
 configure-work: check-brew
 	@./lib/setup.sh work

@@ -4,6 +4,7 @@ brew "curl"
 brew "bash"
 brew "imagemagick"
 brew "pngquant"
+brew "oven-sh/bun/bun"
 
 brew "mas"
 
