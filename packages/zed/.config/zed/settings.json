@@ -1,4 +1,5 @@
 {
+    "relative_line_numbers": "enabled",
     "agent_servers": {
         "opencode": {
             "type": "registry",
@@ -71,5 +72,6 @@
         "emmet": true,
         "scss": true,
         "html": true,
+        "toml": true,
     },
 }
