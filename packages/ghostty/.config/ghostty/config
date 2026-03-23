@@ -1,4 +1,5 @@
 font-family = "Berkeley Mono"
-theme = Catppuccin Frappe
+font-size = 14
+theme = Catppuccin Mocha
 
 macos-titlebar-style = tabs

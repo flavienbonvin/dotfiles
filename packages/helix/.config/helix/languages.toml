@@ -1,3 +1,7 @@
+[language-server.tailwindcss-ls]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+
 [[language]]
 name = "javascript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
@@ -11,4 +15,5 @@ auto-format = true
 [[language]]
 name = "tsx"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+language-servers = ["typescript-language-server", "tailwindcss-ls"]
 auto-format = true
