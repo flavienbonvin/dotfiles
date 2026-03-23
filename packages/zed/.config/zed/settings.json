@@ -1,5 +1,4 @@
 {
-    "relative_line_numbers": "enabled",
     "agent_servers": {
         "opencode": {
             "type": "registry",
