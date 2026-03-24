@@ -17,3 +17,12 @@ name = "tsx"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 language-servers = ["typescript-language-server", "tailwindcss-ls"]
 auto-format = true
+
+[[language]]
+name = "astro"
+formatter = { command = 'prettier', args = [
+  "--stdin-filepath",
+  "%{buffer_name}",
+] }
+language-servers = ["astro-ls", "tailwindcss-ls"]
+auto-format = true
