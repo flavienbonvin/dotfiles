@@ -15,11 +15,11 @@ check-bun:
 
 stow-work: check-stow
 	echo "🚛 Stowing work packages"
-	@stow -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(WORK_PACKAGES)
+	@stow -R -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(WORK_PACKAGES)
 
 stow-personal: check-stow
 	echo "🚛 Stowing personal packages"
-	@stow -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(PERSONAL_PACKAGES)
+	@stow -R -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(PERSONAL_PACKAGES)
 
 install-lsp: check-bun
 	@./lib/install-lsp.sh
