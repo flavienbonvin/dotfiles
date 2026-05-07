@@ -6,15 +6,26 @@
         },
     },
     {
-        "context": "Workspace",
-        "bindings": {
-            "cmd-shift-g": "git_panel::ToggleFocus",
-        },
-    },
-    {
         "context": "Terminal",
         "bindings": {
             "shift-enter": ["terminal::SendText", "\u001b\r"],
+        },
+    },
+    {
+        "context": "Pane",
+        "unbind": {
+            "cmd-g": "search::SelectNextMatch",
+        },
+    },
+    {
+        "context": "ThreadsSidebar",
+        "unbind": {
+            "cmd-g": "agents_sidebar::ToggleThreadHistory",
+        },
+    },
+    {
+        "bindings": {
+            "cmd-g": "git_panel::Toggle",
         },
     },
 ]
