@@ -1,10 +1,7 @@
 {
-    "helix_mode": true,
+    "cli_default_open_behavior": "new_window",
     "agent_servers": {
-        "opencode": {
-            "type": "registry",
-        },
-        "mistral-vibe": {
+        "claude-acp": {
             "type": "registry",
         },
     },
@@ -24,23 +21,26 @@
     },
 
     "agent": {
+        "button": true,
+        "sidebar_side": "right",
+        "dock": "right",
         "single_file_review": false,
         "tool_permissions": {
             "default": "allow",
         },
         "default_profile": "write",
         "default_model": {
-            "effort": "medium",
-            "enable_thinking": false,
-            "provider": "zed.dev",
-            "model": "claude-sonnet-4-6",
+            "enable_thinking": true,
+            "provider": "anthropic",
+            "model": "claude-sonnet-4-6-latest",
         },
     },
 
     "edit_predictions": {
-        "codestral": {
-            "api_url": "https://codestral.mistral.ai",
-            "max_tokens": 150,
+        "open_ai_compatible_api": {
+            "model": "auto",
+            "api_url": "https://lumo.proton.me/api/ai/v1",
+            "prompt_format": "glm",
         },
         "provider": "zed",
     },
@@ -61,6 +61,23 @@
         "YAML": {
             "tab_size": 2,
         },
+    },
+
+    // Panel changes
+    "project_panel": {
+        "entry_spacing": "comfortable",
+        "hide_gitignore": true,
+        "dock": "left",
+    },
+    "git_panel": {
+        "status_style": "icon",
+        "dock": "left",
+    },
+    "debugger": {
+        "dock": "bottom",
+    },
+    "collaboration_panel": {
+        "button": false,
     },
 
     "auto_install_extensions": {
