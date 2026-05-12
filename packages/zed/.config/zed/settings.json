@@ -1,4 +1,5 @@
 {
+    "diff_view_style": "unified",
     "cli_default_open_behavior": "new_window",
     "agent_servers": {
         "claude-acp": {
@@ -29,17 +30,13 @@
             "default": "allow",
         },
         "default_profile": "write",
-        "default_model": {
-            "enable_thinking": true,
-            "provider": "anthropic",
-            "model": "claude-sonnet-4-6-latest",
-        },
     },
 
     "edit_predictions": {
+        "allow_data_collection": "no",
         "open_ai_compatible_api": {
-            "model": "auto",
-            "api_url": "https://lumo.proton.me/api/ai/v1",
+            "model": "lumo-fast",
+            "api_url": "https://lumo.proton.me/api/ai/v1/chat/completions",
             "prompt_format": "glm",
         },
         "provider": "zed",
