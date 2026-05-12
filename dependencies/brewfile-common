@@ -1,5 +1,6 @@
 brew "git"
 brew "wget"
+brew "rtk"
 brew "curl"
 brew "bash"
 brew "imagemagick"
