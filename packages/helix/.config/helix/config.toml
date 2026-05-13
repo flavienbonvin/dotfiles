@@ -6,3 +6,8 @@ color-modes = true
 
 [editor.file-picker]
 git-ignore = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
