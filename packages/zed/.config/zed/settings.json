@@ -52,6 +52,9 @@
             "code_actions_on_format": { "source.fixAll.eslint": true },
             "formatter": "prettier",
         },
+        "Astro": {
+            "formatter": "prettier",
+        },
         "Make": {
             "hard_tabs": true,
         },
