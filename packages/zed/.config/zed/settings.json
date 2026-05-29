@@ -19,10 +19,10 @@
 
     // AI & Agent
     "agent_servers": {
-        "opencode": {
+        "claude-acp": {
             "type": "registry",
         },
-        "claude-acp": {
+        "opencode": {
             "type": "registry",
         },
     },
@@ -83,6 +83,23 @@
         },
         "YAML": {
             "tab_size": 2,
+        },
+    },
+    "lsp": {
+        "vtsls": {
+            "settings": {
+                "typescript": {
+                    "updateImportsOnFileMove": {
+                        "enabled": "always",
+                    },
+                },
+                "javascript": {
+                    "updateImportsOnFileMove": {
+                        "enabled": "always",
+                    },
+                },
+            },
+            "enable_lsp_tasks": true,
         },
     },
 
