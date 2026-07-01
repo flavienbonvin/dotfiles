@@ -20,6 +20,11 @@
     // AI & Agent
     "agent_servers": {
         "claude-acp": {
+            "default_config_options": {
+                "model": "default",
+                "mode": "acceptEdits",
+                "effort": "medium",
+            },
             "type": "registry",
         },
         "opencode": {

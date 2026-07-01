@@ -8,8 +8,6 @@
 [push]
     autoSetupRemote = true
 
-[core]
-    editor = zed --wait
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process

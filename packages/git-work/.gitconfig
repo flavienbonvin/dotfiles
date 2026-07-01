@@ -8,9 +8,6 @@
 [push]
     autoSetupRemote = true
 
-[core]
-    editor = zed --wait
-
 [alias]
 	gsm = git switch main && git pull && git fetch --all && gclean
 
