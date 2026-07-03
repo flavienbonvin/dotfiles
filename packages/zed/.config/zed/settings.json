@@ -32,6 +32,18 @@
         },
     },
     "agent": {
+        "favorite_models": [
+            {
+                "provider": "Lumo",
+                "model": "lumo-plus-v1",
+                "enable_thinking": false,
+            },
+            {
+                "provider": "Lumo",
+                "model": "lumo-basic-v1",
+                "enable_thinking": false,
+            },
+        ],
         "default_model": {
             "provider": "Lumo",
             "model": "lumo-plus-v1",
