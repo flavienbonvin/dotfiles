@@ -1,3 +1,5 @@
 matches:
   - trigger: ":user"
     replace: "api/internal/quark/user:create"
+  - trigger: ":desktop"
+    replace: "\"overrideURL\": {\n  \"account\": \"https://account.binet.proton.black\",\n  \"calendar\": \"https://calendar.binet.proton.black\",\n  \"mail\": \"https://mail.binet.proton.black\"\n}"
