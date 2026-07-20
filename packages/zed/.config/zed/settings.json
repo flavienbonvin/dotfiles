@@ -29,7 +29,8 @@
         },
         "opencode": {
             "default_config_options": {
-                "model": "proton-lumo/lumo-thinking",
+                "effort": "thinking (default)",
+                "model": "proton-lumo/lumo-max",
             },
             "type": "registry",
         },
