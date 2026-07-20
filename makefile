@@ -1,6 +1,7 @@
 PKG_DIR := packages
+STOW_FLAGS :=
 
-COMMON_PACKAGES := stow-config ghostty starship claude zed agents fish-common espanso-common helix
+COMMON_PACKAGES := stow-config ghostty starship claude opencode zed agents fish-common espanso-common helix
 WORK_PACKAGES := fish-work git-work ssh-work zsh-work espanso-work
 PERSONAL_PACKAGES := fish-personal git-personal ssh-personal zsh-personal
 
@@ -15,11 +16,11 @@ check-bun:
 
 stow-work: check-stow
 	echo "🚛 Stowing work packages"
-	@stow -R -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(WORK_PACKAGES)
+	@stow $(STOW_FLAGS) -R -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(WORK_PACKAGES)
 
 stow-personal: check-stow
 	echo "🚛 Stowing personal packages"
-	@stow -R -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(PERSONAL_PACKAGES)
+	@stow $(STOW_FLAGS) -R -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(PERSONAL_PACKAGES)
 
 install-lsp: check-bun
 	@./lib/install-lsp.sh
