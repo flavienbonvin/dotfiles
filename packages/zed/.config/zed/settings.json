@@ -1,6 +1,6 @@
 {
     // Appearance
-    "theme": "Catppuccin Mocha",
+    "theme": "One Dark",
     "ui_font_family": "Berkeley Mono",
     "buffer_font_family": "Berkeley Mono",
     "show_whitespaces": "trailing",
@@ -62,6 +62,7 @@
         "default_profile": "write",
     },
     "edit_predictions": {
+        "mode": "subtle",
         "open_ai_compatible_api": {
             "prompt_format": "glm",
             "model": "lumo-plus-v1",
@@ -131,11 +132,19 @@
     // Language overrides
     "languages": {
         "TypeScript": {
-            "code_actions_on_format": { "source.fixAll.eslint": true },
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
+                "source.organizeImports": true,
+                "source.removeUnusedImports": true,
+            },
             "formatter": "prettier",
         },
         "TSX": {
-            "code_actions_on_format": { "source.fixAll.eslint": true },
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
+                "source.organizeImports": true,
+                "source.removeUnusedImports": true,
+            },
             "formatter": "prettier",
         },
         "Astro": {
