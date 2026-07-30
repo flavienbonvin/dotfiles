@@ -1,6 +1,7 @@
 [user]
 	name = Flavien Bonvin
 	email = flavien.bonvin@proton.ch
+	signingkey = /Users/fbonvin/.ssh/gitlab.pub
 
 [pull]
     rebase = true
@@ -16,3 +17,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[gpg]
+	format = ssh
