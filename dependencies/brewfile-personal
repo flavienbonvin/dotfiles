@@ -1,4 +1,7 @@
 brew "mole"
 
 cask "helium-browser"
+cask "proton-drive"
 cask "signal"
+
+mas "GoodLinks", id: 1_474_335_294
