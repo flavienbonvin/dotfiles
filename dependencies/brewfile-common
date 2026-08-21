@@ -20,14 +20,12 @@ cask "cleanshot"
 cask "coconutbattery"
 cask "deezer"
 cask "espanso"
-cask "firefox"
 cask "ghostty"
 cask "handy"
 cask "keyboardcleantool"
 cask "maccy"
 cask "obsidian"
 cask "pearcleaner"
-cask "proton-drive"
 cask "rectangle-pro"
 cask "refine"
 cask "thaw"
@@ -37,4 +35,3 @@ mas "Numbers", id: 361_304_891
 mas "Pages", id: 361_309_726
 mas "Keynote", id: 361_285_480
 mas "Things", id: 904_280_696
-mas "GoodLinks", id: 1_474_335_294
