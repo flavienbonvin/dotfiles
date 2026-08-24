@@ -4,7 +4,6 @@ brew "haproxy"
 brew "pkg-config"
 
 cask "brave-browser"
-cask "cap"
 cask "duckduckgo"
 cask "figma"
 cask "firefox"
