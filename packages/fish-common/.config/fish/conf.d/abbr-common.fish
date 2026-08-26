@@ -8,12 +8,14 @@
 
 abbr -a --set-cursor gbn "git switch -c %"
 abbr -a gbsm "git switch main && git pull && git fetch --all"
+abbr -a gbsr "git switch master && git pull && git fetch --all"
 abbr -a gbclean "git fetch --all -p; git branch -v | grep 'gone' | awk '{ print \$1 }' | xargs -n 1 git branch -D"
 
 abbr -a gca "git add ."
 abbr -a --set-cursor gcm "git add . && git commit -m \"%\""
 abbr -a --set-cursor gcmp "git add . && git commit -m \"%\" && git push"
 abbr -a gcan "git add . && git commit --amend --no-edit"
+abbr -a gcn "git commit --amend --no-edit"
 
 abbr -a gpp "git push"
 abbr -a gpl "git pull"

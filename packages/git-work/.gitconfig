@@ -3,6 +3,18 @@
 	email = flavien.bonvin@proton.ch
 	signingkey = /Users/fbonvin/.ssh/gitlab.pub
 
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	allowedSignersFile = /Users/fbonvin/.ssh/allowed_signers
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgsign = true
+
 [pull]
     rebase = true
 
@@ -17,5 +29,3 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[gpg]
-	format = ssh

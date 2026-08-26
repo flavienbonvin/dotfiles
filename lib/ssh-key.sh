@@ -15,6 +15,9 @@ ssh-add --apple-use-keychain ~/.ssh/github
 cat ~/.ssh/github.pub >> ~/Desktop/github.txt
 echo "📋 Public key saved to ~/Desktop/github.txt"
 
+# Git signs commits with the same key, allowed_signers lets git verify them locally
+echo "flavien.bonvin@pm.me $(cat ~/.ssh/github.pub)" > ~/.ssh/allowed_signers
+
 
 if [ "$PROFILE" = "work" ]; then
     ssh-keygen -t ed25519 -C "flavien.bonvin@proton.ch" -f ~/.ssh/gitlab -N ""  >/dev/null 2>&1
@@ -22,4 +25,8 @@ if [ "$PROFILE" = "work" ]; then
     ssh-add --apple-use-keychain ~/.ssh/gitlab
     cat ~/.ssh/gitlab.pub >> ~/Desktop/gitlab.txt
     echo "📋 Public key saved to ~/Desktop/gitlab.txt"
+
+    echo "flavien.bonvin@proton.ch $(cat ~/.ssh/gitlab.pub)" >> ~/.ssh/allowed_signers
 fi
+
+echo "✍️  Add the public key to GitHub/GitLab as a signing key, not only as an auth key"

@@ -1,6 +1,19 @@
 [user]
 	name = Flavien Bonvin
 	email = flavien.bonvin@pm.me
+	signingkey = /Users/fbonvin/.ssh/github.pub
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	allowedSignersFile = /Users/fbonvin/.ssh/allowed_signers
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgsign = true
 
 [pull]
     rebase = true
