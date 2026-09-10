@@ -1,6 +1,7 @@
 {
     // Appearance
-    "theme": "One Dark",
+    "icon_theme": "Colored Zed Icons Theme Light",
+    "theme": "Catppuccin Frappé",
     "ui_font_family": "Berkeley Mono",
     "buffer_font_family": "Berkeley Mono",
     "show_whitespaces": "trailing",
