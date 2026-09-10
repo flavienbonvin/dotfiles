@@ -7,6 +7,27 @@ if [ -z "$PROFILE" ] || { [ "$PROFILE" != "personal" ] && [ "$PROFILE" != "work"
     exit 1
 fi
 
+EXISTING=""
+
+for KEY in ~/.ssh/github ~/.ssh/github.pub; do
+    [ -e "$KEY" ] && EXISTING="$EXISTING $KEY"
+done
+
+if [ "$PROFILE" = "work" ]; then
+    for KEY in ~/.ssh/gitlab ~/.ssh/gitlab.pub; do
+        [ -e "$KEY" ] && EXISTING="$EXISTING $KEY"
+    done
+fi
+
+if [ -n "$EXISTING" ]; then
+    echo "❌ SSH keys already exist:"
+    for KEY in $EXISTING; do
+        echo "   $KEY"
+    done
+    echo "Remove or back them up before running this script, generating new ones would override them."
+    exit 1
+fi
+
 printf "🔑 Setting up SSH keys for $PROFILE profile\n\n"
 
 ssh-keygen -t ed25519 -C "flavien.bonvin@pm.me" -f ~/.ssh/github -N "" >/dev/null 2>&1
