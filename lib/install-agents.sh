@@ -1,7 +1,7 @@
 #!/bin/sh
 
-printf "Installing PI...\n"
-curl -fsSL https://pi.dev/install.sh | sh
+eval "$(fnm env --shell bash)"
+fnm use lts-latest
 
-printf "\nInstalling Claude Code...\n"
-curl -fsSL https://claude.ai/install.sh | bash
+printf "Installing PI...\n"
+npm install -g @earendil-works/pi-coding-agent

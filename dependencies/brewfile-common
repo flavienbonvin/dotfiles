@@ -1,7 +1,6 @@
 brew "git"
 brew "fnm"
 brew "wget"
-brew "rtk"
 brew "curl"
 brew "bash"
 
@@ -15,6 +14,9 @@ brew "starship"
 brew "font-new-york"
 brew "font-sf-pro"
 brew "font-fira-code-nerd-font"
+
+brew "rtk"
+cask "claude-code"
 
 cask "betterdisplay"
 cask "cleanshot"
