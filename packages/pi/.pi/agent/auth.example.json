@@ -1,0 +1,10 @@
+{
+    "proton-lumo": {
+        "type": "api_key",
+        "key": "XXX"
+    },
+    "anthropic": {
+        "type": "api_key",
+        "key": "XXX"
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "providers": {
+        "proton-lumo": {
+            "baseUrl": "https://lumo.proton.me/api/ai/v1",
+            "api": "openai-completions",
+            "compat": {
+                "supportsDeveloperRole": false,
+                "supportsReasoningEffort": true,
+                "thinkingFormat": "reasoning_effort"
+            },
+            "models": [
+                {
+                    "id": "lumo-max",
+                    "name": "Lumo Max",
+                    "reasoning": true,
+                    "input": ["text"],
+                    "thinkingLevelMap": {
+                        "off": "none",
+                        "minimal": null,
+                        "low": null,
+                        "medium": null,
+                        "high": "high",
+                        "xhigh": null,
+                        "max": "max"
+                    }
+                },
+                {
+                    "id": "lumo-lite",
+                    "name": "Lumo Lite",
+                    "reasoning": true,
+                    "input": ["text", "image"],
+                    "thinkingLevelMap": {
+                        "off": "none",
+                        "minimal": null,
+                        "low": null,
+                        "medium": null,
+                        "high": "high",
+                        "xhigh": null,
+                        "max": null
+                    }
+                }
+            ]
+        }
+    }
+}
