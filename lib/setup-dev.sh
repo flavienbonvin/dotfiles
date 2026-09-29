@@ -9,8 +9,12 @@ fi
 
 printf "📦 Setting up package managers for $PROFILE profile\n\n"
 
+eval "$(fnm env --shell bash)"
+fnm install --lts
+fnm use lts-latest
+
 if ! command -v node >/dev/null 2>&1; then
-    echo "❌ Node.js not found. Run 'nvm install lts' first."
+    echo "❌ Node.js not found. fnm setup may have failed."
     exit 1
 fi
 

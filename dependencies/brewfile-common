@@ -1,4 +1,5 @@
 brew "git"
+brew "fnm"
 brew "wget"
 brew "rtk"
 brew "curl"

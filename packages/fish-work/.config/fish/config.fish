@@ -1,4 +1,5 @@
 starship init fish | source
+fnm env --use-on-cd --shell fish | source
 set -x NODE_EXTRA_CA_CERTS (mkcert -CAROOT)/rootCA.pem
 
 # bun
