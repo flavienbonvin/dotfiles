@@ -1,4 +1,4 @@
-starship init fish | source
+
 fnm env --use-on-cd --shell fish | source
 
 export PATH="$HOME/.local/bin:$PATH"
