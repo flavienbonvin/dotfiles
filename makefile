@@ -1,7 +1,7 @@
 PKG_DIR := packages
 STOW_FLAGS :=
 
-COMMON_PACKAGES := stow-config ghostty starship claude opencode zed agents fish-common espanso-common helix pi
+COMMON_PACKAGES := stow-config ghostty starship claude zed agents fish-common espanso-common helix pi
 WORK_PACKAGES := fish-work git-work ssh-work zsh-work espanso-work
 PERSONAL_PACKAGES := fish-personal git-personal ssh-personal zsh-personal
 
