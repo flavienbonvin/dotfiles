@@ -9,9 +9,9 @@ brew "mas"
 
 brew "fish"
 
-brew "font-new-york"
-brew "font-sf-pro"
-brew "font-fira-code-nerd-font"
+cask "font-new-york"
+cask "font-sf-pro"
+cask "font-fira-code-nerd-font"
 
 brew "rtk"
 cask "claude-code"
