@@ -24,3 +24,6 @@ printf "4️⃣  Setting up Node package managers\n\n"
 
 printf "5️⃣  Setting LSP server\n\n"
 ./lib/install-lsp.sh
+
+printf "6️⃣  Installing coding agents\n\n"
+./lib/install-agents.sh
