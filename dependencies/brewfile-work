@@ -6,7 +6,7 @@ brew "pkg-config"
 cask "brave-browser"
 cask "duckduckgo"
 cask "figma"
-cask "firefox"
+
 cask "firefox@developer-edition"
 cask "floorp"
 cask "google-chrome"
