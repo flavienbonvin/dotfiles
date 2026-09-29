@@ -15,11 +15,11 @@ check-bun:
 	@./utils/check-bun.sh
 
 stow-work: check-stow
-	echo "🚛 Stowing work packages"
+	@echo "🚛 Stowing work packages"
 	@stow $(STOW_FLAGS) -R -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(WORK_PACKAGES)
 
 stow-personal: check-stow
-	echo "🚛 Stowing personal packages"
+	@echo "🚛 Stowing personal packages"
 	@stow $(STOW_FLAGS) -R -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(PERSONAL_PACKAGES)
 
 # done here to make sure that show ran and fish files are symlinked
