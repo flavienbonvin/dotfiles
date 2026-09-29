@@ -1,0 +1,13 @@
+{
+    "lastChangelogVersion": "0.87.1",
+    "theme": "dark",
+    "enabledModels": [
+        "proton-lumo/lumo-max",
+        "proton-lumo/lumo-lite",
+        "anthropic/claude-opus-5-5",
+        "anthropic/claude-sonnet-5-5"
+    ],
+    "packages": ["npm:pi-rtk-optimizer"],
+    "defaultProvider": "anthropic",
+    "defaultModel": "claude-opus-5-5"
+}
