@@ -9,7 +9,6 @@ brew "helix"
 brew "mas"
 
 brew "fish"
-brew "starship"
 
 brew "font-new-york"
 brew "font-sf-pro"
