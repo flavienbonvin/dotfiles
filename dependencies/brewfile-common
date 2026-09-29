@@ -1,7 +1,6 @@
 brew "git"
 brew "fnm"
-brew "wget"
-brew "curl"
+
 brew "bash"
 
 brew "helix"

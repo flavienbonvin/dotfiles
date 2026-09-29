@@ -1,7 +1,6 @@
 #!/bin/sh
 
-eval "$(fnm env --shell bash)"
-fnm use lts-latest
+export PATH="$HOME/.bun/bin:$PATH"
 
 printf "Installing PI...\n"
-npm install -g @earendil-works/pi-coding-agent
+bun install -g @earendil-works/pi-coding-agent
