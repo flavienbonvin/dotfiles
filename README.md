@@ -6,12 +6,13 @@ The stack: fish with the [Hydro](https://github.com/jorgebucaran/hydro) prompt, 
 
 ## Before you start
 
-Install Homebrew and Stow first. The scripts check for both and stop if they're missing.
+Install Homebrew first. The scripts stop if it's missing. `make configure-*` installs Stow along with everything else.
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install stow
 ```
+
+Running `make stow-personal` or `make stow-work` on its own needs Stow installed already (`brew install stow`).
 
 ## Set up a new laptop
 
