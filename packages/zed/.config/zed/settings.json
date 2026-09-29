@@ -20,6 +20,12 @@
 
     // AI & Agent
     "agent_servers": {
+        "pi-acp": {
+            "default_config_options": {
+                "thought_level": "medium",
+            },
+            "type": "registry",
+        },
         "claude-acp": {
             "default_config_options": {
                 "model": "default",
