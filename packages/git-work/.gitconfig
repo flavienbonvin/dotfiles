@@ -16,7 +16,10 @@
 	gpgsign = true
 
 # Repos with a GitHub remote use the GitHub identity and signing key instead
-[includeIf "hasconfig:remote.*.url:git@github.com:**"]
+[includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
+	path = ~/.gitconfig-github
+
+[includeIf "hasconfig:remote.*.url:https://github.com/**"]
 	path = ~/.gitconfig-github
 
 [pull]
