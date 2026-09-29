@@ -1,4 +1,5 @@
 brew "git"
+brew "stow"
 brew "fnm"
 
 brew "bash"
