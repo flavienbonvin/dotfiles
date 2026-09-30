@@ -15,8 +15,10 @@ fnm install --lts
 fnm use lts-latest
 
 # Bun
-if ! command -v bun >/dev/null; then
-    curl -fsSL https://bun.com/install | bash
+# SHELL=/bin/sh keeps the installer from editing the stowed fish config
+# (BUN_INSTALL is already set in fish-common/conf.d/dev-paths.fish).
+if [ ! -x "$HOME/.bun/bin/bun" ]; then
+    curl -fsSL https://bun.com/install | SHELL=/bin/sh bash
 fi
 
 export PATH="$HOME/.bun/bin:$PATH"
