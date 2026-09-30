@@ -91,7 +91,6 @@ Read the output with the user. Two cases need action:
 Machine-specific values to check, because they are hardcoded in the repo:
 
 - `packages/git-work/.gitconfig` and `packages/ssh-work/.ssh/config` use `/Users/fbonvin/...` paths. Check that the username matches. Replace with `~` if it does not.
-- `packages/ssh-work/.ssh/config` includes `/Users/fbonvin/.colima/ssh_config`.
 - `packages/fish-work/.config/fish/config.fish` assumes the mkcert root is `~/Library/Application Support/mkcert/rootCA.pem`. Confirm with `mkcert -CAROOT`.
 - The GitLab host is `gitlab.protontech.ch`.
 
