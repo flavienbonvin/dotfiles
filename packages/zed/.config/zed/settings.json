@@ -1,6 +1,6 @@
 {
     // Appearance
-    "icon_theme": "Colored Zed Icons Theme Light",
+    "icon_theme": "Symbols Icon Theme",
     "theme": "Aura Dark (Soft Text)",
     "ui_font_family": "Berkeley Mono",
     "buffer_font_family": "Berkeley Mono",
@@ -36,6 +36,9 @@
         },
     },
     "agent": {
+        "threads_sidebar": {
+            "position": "right",
+        },
         "favorite_models": [
             {
                 "provider": "Lumo",
@@ -55,7 +58,6 @@
             "enable_thinking": true,
         },
         "button": true,
-        "sidebar_side": "right",
         "dock": "right",
         "single_file_review": false,
         "tool_permissions": {
@@ -179,13 +181,15 @@
 
     // Extensions
     "auto_install_extensions": {
+        "aura-theme": true,
         "catppuccin": true,
-        "catppuccin-icons": true,
-        "fish": true,
-        "make": true,
         "emmet": true,
-        "scss": true,
+        "fish": true,
         "html": true,
+        "make": true,
+        "php": true,
+        "scss": true,
+        "symbols": true,
         "toml": true,
     },
 }
