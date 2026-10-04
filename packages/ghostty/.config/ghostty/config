@@ -1,5 +1,28 @@
+# --- Font ---
 font-family = "Berkeley Mono"
 font-size = 15
-theme = Catppuccin Frappe
+font-thicken = true
+adjust-cell-height = 10%
 
+# --- Look ---
+background-opacity = 0.92
+background-blur = 20
+cursor-style = bar
+
+# --- Theme ---
+theme = Aura
+
+# --- macOS ---
+macos-icon = glass
 macos-titlebar-style = tabs
+
+# --- Window ---
+window-padding-x = 8
+window-padding-y = 6
+window-padding-balance = true
+unfocused-split-opacity = 0.5
+
+# --- Behavior ---
+copy-on-select = clipboard
+mouse-hide-while-typing = true
+click-repeat-interval = 0
