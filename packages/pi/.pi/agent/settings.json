@@ -9,5 +9,6 @@
     ],
     "packages": ["npm:pi-rtk-optimizer"],
     "defaultProvider": "anthropic",
-    "defaultModel": "claude-sonnet-5-5"
+    "defaultModel": "claude-sonnet-5-5",
+    "hideThinkingBlock": true
 }
