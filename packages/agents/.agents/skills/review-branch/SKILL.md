@@ -1,5 +1,5 @@
 ---
-name: review-vs-main
+name: review-branch
 description: Review the current branch against its parent branch (usually main). Checks for leftover debug code, TODOs, commented code, logic bugs, race conditions, unhandled cases, standards compliance, feature flag or kill switch coverage, sensible test coverage, accessibility, and privacy leaks in logs. Use when the user asks for a code review, a pre PR review, or says "review my branch".
 ---
 
