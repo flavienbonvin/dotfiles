@@ -1,5 +1,5 @@
 {
-    "lastChangelogVersion": "1.0.3",
+    "lastChangelogVersion": "1.0.4",
     "theme": "dark",
     "enabledModels": [
         "proton-lumo/lumo-max",
@@ -7,7 +7,7 @@
         "anthropic/claude-opus-5-5",
         "anthropic/claude-sonnet-5-5"
     ],
-    "packages": ["npm:pi-rtk-optimizer"],
+    "packages": ["npm:pi-rtk-optimizer", "npm:@plannotator/pi-extension"],
     "defaultProvider": "anthropic",
     "defaultModel": "claude-sonnet-5-5",
     "hideThinkingBlock": true
