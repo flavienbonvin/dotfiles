@@ -3,9 +3,10 @@ matches:
     replace: "api/internal/quark/user:create"
   - trigger: ":claim"
     replace: "api/internal/quark/account:address:claim?email="
+  - trigger: ":clear"
+    replace: "api/internal/quark/redis:exec?instance=default&control=flushdb"
   - trigger: ":desktop"
     replace: "\"overrideURL\": {\n  \"account\": \"https://account.binet.proton.black\",\n  \"calendar\": \"https://calendar.binet.proton.black\",\n  \"mail\": \"https://mail.binet.proton.black\"\n}"
-  - trigger: ":clear"
-    replace: "quark/redis:exec?instance=default&control=flushdb"
+
   - trigger: ":testmail"
     replace: "easyflavien@gmail.com"
