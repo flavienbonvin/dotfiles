@@ -21,7 +21,6 @@ Read the stat first. On a large diff, read it per file or per directory instead 
 
 - If the user names another base branch or a PR, use that instead of main.
 - `git diff "$BASE"` compares against the working tree, so uncommitted work on the branch is included. Say so in the verdict if the diff contains uncommitted changes.
-- With GitButler, HEAD can be the workspace commit and hold several branches. If the user names a branch, diff that branch's tip (`git diff "$BASE" <branch>`) so other agents' work stays out of the review.
 - Skip lockfiles, snapshots, and generated files. Only check that generated output matches its source change.
 - Read the changed files in full when the diff alone lacks context, and read callers of any changed shared function.
 - Load the coding standards from the repo root (AGENTS.md or CLAUDE.md, whichever exists) and from `~/.claude/coding-rules.md`. Honor both, and skip a file that does not exist.
