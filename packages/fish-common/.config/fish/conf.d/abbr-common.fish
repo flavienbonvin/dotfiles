@@ -37,3 +37,7 @@ abbr -a gstp "git stash pop"
 # gu = undo (reset, revert)
 abbr -a guh "git reset --hard"
 abbr -a guho "git reset --hard origin/(git branch --show-current)"
+
+
+# pnpm
+abbr -a p pnpm
