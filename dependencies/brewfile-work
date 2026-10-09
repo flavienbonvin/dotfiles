@@ -2,6 +2,7 @@ brew "mkcert"
 brew "nss"
 brew "haproxy"
 brew "pkgconf"
+brew "pre-commit"
 
 brew "git-lfs"
 brew "llvm"
