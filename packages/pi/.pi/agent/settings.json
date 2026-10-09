@@ -1,13 +1,20 @@
 {
     "lastChangelogVersion": "1.1.0",
-    "theme": "dark",
+    "theme": "aura",
     "enabledModels": [
         "proton-lumo/lumo-max",
         "proton-lumo/lumo-lite",
         "anthropic/claude-opus-5-5",
         "anthropic/claude-sonnet-5-5"
     ],
-    "packages": ["npm:pi-rtk-optimizer", "npm:@plannotator/pi-extension"],
+    "packages": [
+        "npm:pi-rtk-optimizer",
+        "npm:@plannotator/pi-extension",
+        "npm:context-mode",
+        "npm:pi-memory",
+        "npm:@aliou/pi-guardrails",
+        "npm:pi-browser-use"
+    ],
     "defaultProvider": "anthropic",
     "defaultModel": "claude-sonnet-5-5",
     "hideThinkingBlock": true
