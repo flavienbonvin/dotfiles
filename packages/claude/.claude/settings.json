@@ -82,7 +82,8 @@
     "enabledPlugins": {
         "typescript-lsp@claude-plugins-official": true,
         "figma@claude-plugins-official": true,
-        "chrome-devtools-mcp@chrome-devtools-plugins": true
+        "chrome-devtools-mcp@chrome-devtools-plugins": true,
+        "openviking-memory@openviking": true
     },
     "extraKnownMarketplaces": {
         "chrome-devtools-plugins": {
@@ -90,6 +91,13 @@
                 "source": "github",
                 "repo": "ChromeDevTools/chrome-devtools-mcp"
             }
+        },
+        "openviking": {
+            "source": {
+                "source": "url",
+                "url": "https://docs.openviking.ai/dl/plugins/claude/marketplace.json"
+            },
+            "autoUpdate": true
         }
     },
     "effortLevel": "medium",
