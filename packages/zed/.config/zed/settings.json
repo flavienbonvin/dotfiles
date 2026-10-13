@@ -168,10 +168,16 @@
                     "updateImportsOnFileMove": {
                         "enabled": "always",
                     },
+                    "preferences": {
+                        "importModuleSpecifier": "project-relative",
+                    },
                 },
                 "javascript": {
                     "updateImportsOnFileMove": {
                         "enabled": "always",
+                    },
+                    "preferences": {
+                        "importModuleSpecifier": "project-relative",
                     },
                 },
             },
