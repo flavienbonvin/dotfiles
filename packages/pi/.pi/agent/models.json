@@ -1,4 +1,5 @@
 {
+    "$schema": "https://pi.dev/schemas/models.schema.json",
     "providers": {
         "proton-lumo": {
             "baseUrl": "https://lumo.proton.me/api/ai/v1",
@@ -6,7 +7,7 @@
             "compat": {
                 "supportsDeveloperRole": false,
                 "supportsReasoningEffort": true,
-                "thinkingFormat": "reasoning_effort"
+                "thinkingFormat": "qwen"
             },
             "models": [
                 {
