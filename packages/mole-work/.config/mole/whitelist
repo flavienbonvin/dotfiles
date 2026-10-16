@@ -1,0 +1,15 @@
+# Mole Whitelist - Protected paths won't be deleted
+# Saved selections replace optional defaults; built-in safety protections still apply.
+# Add one pattern per line to keep items safe.
+
+~/.gradle/caches/*
+~/.gradle/daemon/*
+~/Library/Caches/ms-playwright*
+FINDER_METADATA
+/Users/fbonvin/.ollama/models/*
+/Users/fbonvin/Library/Caches/JetBrains*
+/Users/fbonvin/Library/Caches/com.jetbrains.toolbox*
+/Users/fbonvin/Library/Application Support/JetBrains*
+/Users/fbonvin/Library/Caches/com.apple.finder
+/Users/fbonvin/Library/Mobile Documents*
+/private/var/log/.proton-recovery.log
