@@ -11,9 +11,7 @@
         "npm:pi-rtk-optimizer",
         "npm:@plannotator/pi-extension",
         "npm:context-mode",
-        "npm:pi-memory",
-        "npm:@aliou/pi-guardrails",
-        "npm:pi-browser-use"
+        "npm:pi-memory"
     ],
     "defaultProvider": "anthropic",
     "defaultModel": "claude-sonnet-5-5",
