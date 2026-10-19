@@ -2,8 +2,8 @@
 
 PROFILE=$1
 
-if [ -z "$PROFILE" ] || { [ "$PROFILE" != "personal" ] && [ "$PROFILE" != "work" ]; }; then
-    echo "❌ Invalid profile. Usage: $0 [personal|work]"
+if [ -z "$PROFILE" ] || { [ "$PROFILE" != "personal" ] && [ "$PROFILE" != "base" ]; }; then
+    echo "❌ Invalid profile. Usage: $0 [personal|base]"
     exit 1
 fi
 
@@ -12,12 +12,6 @@ EXISTING=""
 for KEY in ~/.ssh/github ~/.ssh/github.pub; do
     [ -e "$KEY" ] && EXISTING="$EXISTING $KEY"
 done
-
-if [ "$PROFILE" = "work" ]; then
-    for KEY in ~/.ssh/gitlab ~/.ssh/gitlab.pub; do
-        [ -e "$KEY" ] && EXISTING="$EXISTING $KEY"
-    done
-fi
 
 if [ -n "$EXISTING" ]; then
     echo "❌ SSH keys already exist:"
@@ -40,14 +34,4 @@ echo "📋 Public key saved to ~/Desktop/github.txt"
 echo "flavien.bonvin@pm.me $(cat ~/.ssh/github.pub)" > ~/.ssh/allowed_signers
 
 
-if [ "$PROFILE" = "work" ]; then
-    ssh-keygen -t ed25519 -C "work-email@example.com" -f ~/.ssh/gitlab -N ""  >/dev/null 2>&1
-
-    ssh-add --apple-use-keychain ~/.ssh/gitlab
-    cat ~/.ssh/gitlab.pub >> ~/Desktop/gitlab.txt
-    echo "📋 Public key saved to ~/Desktop/gitlab.txt"
-
-    echo "work-email@example.com $(cat ~/.ssh/gitlab.pub)" >> ~/.ssh/allowed_signers
-fi
-
-echo "✍️  Add the public key to GitHub/GitLab as a signing key, not only as an auth key"
+echo "✍️  Add the public key to GitHub as a signing key, not only as an auth key"

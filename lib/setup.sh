@@ -2,8 +2,8 @@
 
 PROFILE=$1
 
-if [ -z "$PROFILE" ] || { [ "$PROFILE" != "personal" ] && [ "$PROFILE" != "work" ]; }; then
-    echo "❌ Invalid profile. Usage: $0 [personal|work]"
+if [ -z "$PROFILE" ] || { [ "$PROFILE" != "personal" ] && [ "$PROFILE" != "base" ]; }; then
+    echo "❌ Invalid profile. Usage: $0 [personal|base]"
     exit 1
 fi
 
@@ -11,7 +11,7 @@ printf "🌯 Configuring $PROFILE laptop\n\n"
 
 printf "🥇 Installing brew packages and casks\n\n"
 brew bundle --file=./dependencies/brewfile-common
-brew bundle --file=./dependencies/brewfile-$PROFILE
+[ "$PROFILE" = "personal" ] && brew bundle --file=./dependencies/brewfile-personal
 
 printf "🥈 Configuring macos\n\n"
 ./lib/configure-macos.sh

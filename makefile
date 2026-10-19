@@ -1,8 +1,8 @@
 PKG_DIR := packages
-STOW_FLAGS :=
+# --no-folding is required: ~/.agents and ~/.pi/agent also receive files from the private work repo
+STOW_FLAGS := --no-folding
 
 COMMON_PACKAGES := stow-config ghostty claude zed agents fish-common espanso-common helix pi
-WORK_PACKAGES := agents-work pi-work fish-work git-work ssh-work zsh-work espanso-work mole-work
 PERSONAL_PACKAGES := fish-personal git-personal ssh-personal zsh-personal
 
 check-stow:
@@ -14,9 +14,10 @@ check-brew:
 check-bun:
 	@./utils/check-bun.sh
 
-stow-work: check-stow
-	@echo "🚛 Stowing work packages"
-	@stow $(STOW_FLAGS) -R -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(WORK_PACKAGES)
+# Common packages only. The work repo (dotfiles-work) calls this, then stows its own packages.
+stow-base: check-stow
+	@echo "🚛 Stowing common packages"
+	@stow $(STOW_FLAGS) -R -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES)
 
 stow-personal: check-stow
 	@echo "🚛 Stowing personal packages"
@@ -29,9 +30,10 @@ install-fish-plugins:
 install-lsp: check-bun
 	@./lib/install-lsp.sh
 
-configure-work: check-brew
-	@./lib/setup.sh work
-	@$(MAKE) stow-work
+# Shared setup, used by configure-personal and by dotfiles-work (work laptop)
+configure-base: check-brew
+	@./lib/setup.sh base
+	@$(MAKE) stow-base
 	@$(MAKE) install-fish-plugins
 
 configure-personal: check-brew

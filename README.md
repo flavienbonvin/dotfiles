@@ -1,6 +1,6 @@
 # dotfiles
 
-My laptop setup, managed with [GNU Stow](https://www.gnu.org/software/stow/). Two available profiles (`personal` and `work`), and a couple of `make` commands to rebuild a fresh Mac.
+My laptop setup, managed with [GNU Stow](https://www.gnu.org/software/stow/), and a couple of `make` commands to rebuild a fresh Mac. This repo holds the personal setup and the shared base. The work-specific part lives in a separate private repo that builds on this one.
 
 The stack: fish with the [Hydro](https://github.com/jorgebucaran/hydro) prompt, Ghostty, Zed and Helix, `fnm` for Node, Bun and pnpm for packages; Claude Code and pi as coding agents.
 
@@ -12,14 +12,14 @@ Install Homebrew first. The scripts stop if it's missing. `make configure-*` ins
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Running `make stow-personal` or `make stow-work` on its own needs Stow installed already (`brew install stow`).
+Running `make stow-personal` on its own needs Stow installed already (`brew install stow`).
 
 ## Set up a new laptop
 
 ```sh
 git clone <this repo> ~/Developer/dotfiles
 cd ~/Developer/dotfiles
-make configure-personal   # or: make configure-work
+make configure-personal
 ```
 
 In order, this will:
@@ -32,16 +32,20 @@ In order, this will:
 6. Stow the dotfiles.
 7. Install Fisher and the fish plugins (Hydro).
 
-Two things to do by hand afterwards. The public keys are saved to `~/Desktop/github.txt` (and `gitlab.txt` on the work profile). Add them to GitHub or GitLab as signing keys, not only as auth keys, or your commits won't show as verified. Then open a new terminal so fish picks everything up.
+Two things to do by hand afterwards. The public key is saved to `~/Desktop/github.txt`. Add it to GitHub as a signing key, not only as an auth key, or your commits won't show as verified. Then open a new terminal so fish picks everything up.
 
 The SSH step refuses to run if keys already exist, so it never overwrites yours. Move them away first if you want new ones.
+
+## Work laptop
+
+Run `make configure-base` through the private work repo instead (`make configure` there). It calls this repo's `configure-base`, then adds the work packages on top. Stow runs with `--no-folding` because both repos write into `~/.agents` and `~/.pi/agent`.
 
 ## Day to day
 
 | Command                     | What it does                                            |
 | --------------------------- | ------------------------------------------------------- |
 | `make stow-personal`        | Link the personal dotfiles, nothing else                |
-| `make stow-work`            | Link the work dotfiles, nothing else                    |
+| `make stow-base`            | Link the shared packages only (used by the work repo)   |
 | `make install-fish-plugins` | Install Fisher and the plugins listed in `fish_plugins` |
 | `make install-lsp`          | Reinstall the language servers                          |
 | `update` (in fish)          | Update Homebrew, casks and fish plugins                 |

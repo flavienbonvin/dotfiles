@@ -2,8 +2,8 @@
 
 PROFILE=$1
 
-if [ "$PROFILE" != "personal" ] && [ "$PROFILE" != "work" ]; then
-    echo "❌ Invalid profile. Usage: $0 [personal|work]"
+if [ "$PROFILE" != "personal" ] && [ "$PROFILE" != "base" ]; then
+    echo "❌ Invalid profile. Usage: $0 [personal|base]"
     exit 1
 fi
 
