@@ -14,13 +14,14 @@ theme = Aura
 
 # --- macOS ---
 macos-icon = xray
-macos-titlebar-style = tabs
+macos-titlebar-style = hidden
 
 # --- Window ---
-window-padding-x = 8
-window-padding-y = 6
+window-padding-x = 16
+window-padding-y = 8
 window-padding-balance = true
 unfocused-split-opacity = 0.5
+window-decoration = true
 
 # --- Behavior ---
 copy-on-select = clipboard
