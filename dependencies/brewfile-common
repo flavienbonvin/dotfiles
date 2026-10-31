@@ -19,6 +19,7 @@ cask "font-sf-pro"
 cask "font-fira-code-nerd-font"
 
 brew "rtk"
+brew "oxlint"
 cask "claude-code"
 
 cask "betterdisplay"

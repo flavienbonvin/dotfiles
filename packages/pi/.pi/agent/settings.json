@@ -4,6 +4,7 @@
     "enabledModels": [
         "proton-lumo/lumo-max",
         "proton-lumo/lumo-lite",
+        "proton-lumo/lumo-preview",
         "anthropic/claude-opus-5-5",
         "anthropic/claude-sonnet-5-5"
     ],
@@ -11,7 +12,8 @@
         "npm:pi-rtk-optimizer",
         "npm:@plannotator/pi-extension",
         "npm:context-mode",
-        "npm:pi-memory"
+        "npm:pi-memory",
+        "npm:pi-subagents"
     ],
     "defaultProvider": "anthropic",
     "defaultModel": "claude-sonnet-5-5",
