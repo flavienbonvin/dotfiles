@@ -27,3 +27,6 @@ printf "5️⃣  Setting LSP server\n\n"
 
 printf "6️⃣  Installing coding agents\n\n"
 ./lib/install-agents.sh
+
+printf "7️⃣  Installing third-party agent skills\n\n"
+./lib/install-skills.sh

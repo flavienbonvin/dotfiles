@@ -48,6 +48,7 @@ Run `make configure-base` through the private work repo instead (`make configure
 | `make stow-base`            | Link the shared packages only (used by the work repo)   |
 | `make install-fish-plugins` | Install Fisher and the plugins listed in `fish_plugins` |
 | `make install-lsp`          | Reinstall the language servers                          |
+| `make install-skills`       | Install or update third-party agent skills              |
 | `update` (in fish)          | Update Homebrew, casks and fish plugins                 |
 
 ## Customizing the prompt

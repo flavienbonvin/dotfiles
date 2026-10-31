@@ -30,6 +30,9 @@ install-fish-plugins:
 install-lsp: check-bun
 	@./lib/install-lsp.sh
 
+install-skills:
+	@./lib/install-skills.sh
+
 # Shared setup, used by configure-personal and by dotfiles-work (work laptop)
 configure-base: check-brew
 	@./lib/setup.sh base
