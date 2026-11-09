@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+        "things": {
+            "command": "uvx",
+            "args": [
+                "things-mcp"
+            ],
+            "description": "Things 3 tasks and projects (local app, hald/things-mcp)"
+        }
+    }
+}

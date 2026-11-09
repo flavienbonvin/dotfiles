@@ -1,4 +1,5 @@
 brew "mole"
+brew "uv"
 
 cask "helium-browser"
 cask "proton-drive"
@@ -7,3 +8,4 @@ cask "steam"
 cask "transmission"
 
 mas "GoodLinks", id: 1_474_335_294
+mas "Things", id: 904_280_696

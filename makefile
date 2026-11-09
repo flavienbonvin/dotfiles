@@ -4,7 +4,7 @@ PKG_DIR := packages
 export FIRST_INSTALL
 
 COMMON_PACKAGES := stow-config ghostty zed agents fish-common espanso-common helix pi
-PERSONAL_PACKAGES := fish-personal git-personal ssh-personal zsh-personal
+PERSONAL_PACKAGES := fish-personal git-personal pi-personal ssh-personal zsh-personal
 
 check-stow:
 	@./utils/check-stow.sh
