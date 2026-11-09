@@ -23,7 +23,6 @@ brew "oxlint"
 
 cask "betterdisplay"
 cask "cleanshot"
-cask "coconutbattery"
 cask "deezer"
 cask "espanso"
 cask "firefox"
