@@ -1,5 +1,4 @@
 #!/bin/sh
-
 PROFILE=$1
 
 if [ -z "$PROFILE" ] || { [ "$PROFILE" != "personal" ] && [ "$PROFILE" != "base" ]; }; then
@@ -7,31 +6,27 @@ if [ -z "$PROFILE" ] || { [ "$PROFILE" != "personal" ] && [ "$PROFILE" != "base"
     exit 1
 fi
 
-EXISTING=""
+# Safe to re-run: fills whatever is missing and never overrides an existing key.
+KEY=~/.ssh/github
+EMAIL="flavien.bonvin@pm.me"
 
-for KEY in ~/.ssh/github ~/.ssh/github.pub; do
-    [ -e "$KEY" ] && EXISTING="$EXISTING $KEY"
-done
+mkdir -p ~/.ssh && chmod 700 ~/.ssh
+printf "🔑 Setting up the GitHub SSH key for $PROFILE profile\n\n"
 
-if [ -n "$EXISTING" ]; then
-    echo "❌ SSH keys already exist:"
-    for KEY in $EXISTING; do
-        echo "   $KEY"
-    done
-    echo "Remove or back them up before running this script, generating new ones would override them."
-    exit 1
+if [ -e "$KEY" ]; then
+    echo "✅ $KEY already exists, keeping it"
+    # Private key without its public half: derive it instead of generating a new pair
+    [ -e "$KEY.pub" ] || ssh-keygen -y -f "$KEY" > "$KEY.pub"
+else
+    ssh-keygen -t ed25519 -C "$EMAIL" -f "$KEY" -N "" >/dev/null 2>&1
+    cat "$KEY.pub" >> ~/Desktop/github.txt
+    echo "📋 Public key saved to ~/Desktop/github.txt"
+    echo "✍️  Add the public key to GitHub as a signing key, not only as an auth key"
 fi
 
-printf "🔑 Setting up SSH keys for $PROFILE profile\n\n"
-
-ssh-keygen -t ed25519 -C "flavien.bonvin@pm.me" -f ~/.ssh/github -N "" >/dev/null 2>&1
-
-ssh-add --apple-use-keychain ~/.ssh/github
-cat ~/.ssh/github.pub >> ~/Desktop/github.txt
-echo "📋 Public key saved to ~/Desktop/github.txt"
+ssh-add --apple-use-keychain "$KEY" 2>/dev/null
 
 # Git signs commits with the same key, allowed_signers lets git verify them locally
-echo "flavien.bonvin@pm.me $(cat ~/.ssh/github.pub)" > ~/.ssh/allowed_signers
-
-
-echo "✍️  Add the public key to GitHub as a signing key, not only as an auth key"
+SIGNER="$EMAIL $(cat "$KEY.pub")"
+touch ~/.ssh/allowed_signers
+grep -qxF "$SIGNER" ~/.ssh/allowed_signers || echo "$SIGNER" >> ~/.ssh/allowed_signers
