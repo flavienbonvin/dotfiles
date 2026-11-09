@@ -23,7 +23,7 @@ Read the stat first. On a large diff, read it per file or per directory instead 
 - `git diff "$BASE"` compares against the working tree, so uncommitted work on the branch is included. Say so in the verdict if the diff contains uncommitted changes.
 - Skip lockfiles, snapshots, and generated files. Only check that generated output matches its source change.
 - Read the changed files in full when the diff alone lacks context, and read callers of any changed shared function.
-- Load the coding standards from the repo root (AGENTS.md or CLAUDE.md, whichever exists) and from `~/.claude/coding-rules.md`. Honor both, and skip a file that does not exist.
+- Load the coding standards from the repo root (AGENTS.md or CLAUDE.md, whichever exists), and from `~/.pi/agent/AGENTS.md`. Honor both, and skip a file that does not exist.
 
 ## 2. Review checklist
 

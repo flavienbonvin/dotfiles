@@ -2,7 +2,7 @@ PKG_DIR := packages
 # --no-folding is required: ~/.agents and ~/.pi/agent also receive files from the private work repo
 STOW_FLAGS := --no-folding
 
-COMMON_PACKAGES := stow-config ghostty claude zed agents fish-common espanso-common helix pi
+COMMON_PACKAGES := stow-config ghostty zed agents fish-common espanso-common helix pi
 PERSONAL_PACKAGES := fish-personal git-personal ssh-personal zsh-personal
 
 check-stow:

@@ -2,7 +2,7 @@
 
 My laptop setup, managed with [GNU Stow](https://www.gnu.org/software/stow/), and a couple of `make` commands to rebuild a fresh Mac. This repo holds the personal setup and the shared base. The work-specific part lives in a separate private repo that builds on this one.
 
-The stack: fish with the [Hydro](https://github.com/jorgebucaran/hydro) prompt, Ghostty, Zed and Helix, `fnm` for Node, Bun and pnpm for packages; Claude Code and pi as coding agents.
+The stack: fish with the [Hydro](https://github.com/jorgebucaran/hydro) prompt, Ghostty, Zed and Helix, `fnm` for Node, Bun and pnpm for packages; pi as coding agent.
 
 ## Before you start
 

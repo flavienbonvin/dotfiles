@@ -58,7 +58,7 @@ Subject line only. Never write a body or a footer.
 ### Rules
 
 - **subject**: lowercase, imperative mood ("add", not "added"), no period. Aim for 50 chars, hard limit 72.
-- **scope**: optional, lowercase, short noun for the area (e.g. `fish`, `zed`, `claude`). Reuse scopes already in the git log.
+- **scope**: optional, lowercase, short noun for the area (e.g. `fish`, `zed`, `pi`). Reuse scopes already in the git log.
 - **breaking change**: `!` after the type/scope.
 
 ### Examples
