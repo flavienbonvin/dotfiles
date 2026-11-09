@@ -1,5 +1,5 @@
 {
-    "lastChangelogVersion": "1.4.0",
+    "lastChangelogVersion": "1.5.0",
     "theme": "aura",
     "enabledModels": [
         "proton-lumo/lumo-max",
@@ -17,5 +17,10 @@
     ],
     "defaultProvider": "anthropic",
     "defaultModel": "claude-sonnet-5-5",
-    "hideThinkingBlock": true
+    "hideThinkingBlock": true,
+    "extensionChangelogVersions": {
+        "{\"source\":\"npm:pi-rtk-optimizer\",\"scope\":\"user\"}": "0.9.0",
+        "{\"source\":\"npm:pi-memory\",\"scope\":\"user\"}": "0.4.2",
+        "{\"source\":\"npm:pi-subagents\",\"scope\":\"user\"}": "0.87.0"
+    }
 }

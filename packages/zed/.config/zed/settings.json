@@ -21,103 +21,6 @@
         "font_fallbacks": ["FiraCode Nerd Font Mono"],
     },
 
-    // AI & Agent
-    "agent_servers": {
-        "pi-acp": {
-            "default_config_options": {
-                "thought_level": "medium",
-            },
-            "type": "registry",
-        },
-        "claude-acp": {
-            "default_config_options": {
-                "model": "default",
-                "mode": "acceptEdits",
-                "effort": "medium",
-            },
-            "type": "registry",
-        },
-    },
-    "agent": {
-        "threads_sidebar": {
-            "position": "right",
-        },
-        "favorite_models": [
-            {
-                "provider": "Lumo",
-                "model": "lumo-plus-v1",
-                "enable_thinking": false,
-            },
-            {
-                "provider": "Lumo",
-                "model": "lumo-basic-v1",
-                "enable_thinking": false,
-            },
-        ],
-        "default_model": {
-            "effort": "medium",
-            "provider": "zed.dev",
-            "model": "claude-sonnet-5-5",
-            "enable_thinking": true,
-        },
-        "button": true,
-        "dock": "right",
-        "single_file_review": false,
-        "tool_permissions": {
-            "default": "allow",
-        },
-        "default_profile": "write",
-    },
-    "edit_predictions": {
-        "mode": "subtle",
-        "open_ai_compatible_api": {
-            "prompt_format": "glm",
-            "model": "lumo-plus-v1",
-            "api_url": "https://lumo.proton.me/api/ai/v1/chat/completions",
-        },
-        "allow_data_collection": "no",
-        "provider": "zed",
-    },
-    "language_models": {
-        "openai_compatible": {
-            "Lumo": {
-                "api_url": "https://lumo.proton.me/api/ai/v1",
-                "available_models": [
-                    {
-                        "name": "lumo-plus-v1",
-                        "max_tokens": 200000,
-                        "max_output_tokens": 32000,
-                        "max_completion_tokens": 200000,
-                        "capabilities": {
-                            "tools": true,
-                            "images": true,
-                            "parallel_tool_calls": false,
-                            "prompt_cache_key": false,
-                            "chat_completions": true,
-                            "interleaved_reasoning": false,
-                            "max_tokens_parameter": false,
-                        },
-                    },
-                    {
-                        "name": "lumo-basic-v1",
-                        "max_tokens": 266000,
-                        "max_output_tokens": 32000,
-                        "max_completion_tokens": 266000,
-                        "capabilities": {
-                            "tools": true,
-                            "images": true,
-                            "parallel_tool_calls": false,
-                            "prompt_cache_key": false,
-                            "chat_completions": true,
-                            "interleaved_reasoning": false,
-                            "max_tokens_parameter": false,
-                        },
-                    },
-                ],
-            },
-        },
-    },
-
     // Panels & Layout
     "cli_default_open_behavior": "new_window",
     "project_panel": {
@@ -136,26 +39,111 @@
         "button": false,
     },
 
+    // Extensions
+    "auto_install_extensions": {
+        "aura-theme": true,
+        "catppuccin": true,
+        "emmet": true,
+        "fish": true,
+        "html": true,
+        "make": true,
+        "oxc": true,
+        "php": true,
+        "scss": true,
+        "symbols": true,
+        "toml": true,
+    },
+
     // Language overrides
     "languages": {
         "TypeScript": {
+            "prettier": {
+                "allowed": false,
+            },
             "code_actions_on_format": {
-                "source.fixAll.eslint": true,
-                "source.organizeImports": true,
                 "source.removeUnusedImports": true,
             },
-            "formatter": "prettier",
+            "formatter": {
+                "external": {
+                    "command": "pnpm",
+                    "arguments": [
+                        "exec",
+                        "oxfmt",
+                        "--stdin-filepath",
+                        "{buffer_path}",
+                    ],
+                },
+            },
         },
         "TSX": {
+            "prettier": {
+                "allowed": false,
+            },
             "code_actions_on_format": {
-                "source.fixAll.eslint": true,
-                "source.organizeImports": true,
                 "source.removeUnusedImports": true,
             },
-            "formatter": "prettier",
+            "formatter": {
+                "external": {
+                    "command": "pnpm",
+                    "arguments": [
+                        "exec",
+                        "oxfmt",
+                        "--stdin-filepath",
+                        "{buffer_path}",
+                    ],
+                },
+            },
+        },
+        "JavaScript": {
+            "prettier": {
+                "allowed": false,
+            },
+            "code_actions_on_format": {
+                "source.removeUnusedImports": true,
+            },
+            "formatter": {
+                "external": {
+                    "command": "pnpm",
+                    "arguments": [
+                        "exec",
+                        "oxfmt",
+                        "--stdin-filepath",
+                        "{buffer_path}",
+                    ],
+                },
+            },
+        },
+        "JSX": {
+            "prettier": {
+                "allowed": false,
+            },
+            "code_actions_on_format": {
+                "source.removeUnusedImports": true,
+            },
+            "formatter": {
+                "external": {
+                    "command": "pnpm",
+                    "arguments": [
+                        "exec",
+                        "oxfmt",
+                        "--stdin-filepath",
+                        "{buffer_path}",
+                    ],
+                },
+            },
         },
         "Astro": {
-            "formatter": "prettier",
+            "formatter": {
+                "external": {
+                    "command": "pnpm",
+                    "arguments": [
+                        "exec",
+                        "oxfmt",
+                        "--stdin-filepath",
+                        "{buffer_path}",
+                    ],
+                },
+            },
         },
         "Make": {
             "hard_tabs": true,
@@ -164,6 +152,8 @@
             "tab_size": 2,
         },
     },
+
+    // LSP
     "lsp": {
         "vtsls": {
             "settings": {
@@ -188,18 +178,104 @@
         },
     },
 
-    // Extensions
-    "auto_install_extensions": {
-        "aura-theme": true,
-        "catppuccin": true,
-        "emmet": true,
-        "fish": true,
-        "html": true,
-        "make": true,
-        "oxc": true,
-        "php": true,
-        "scss": true,
-        "symbols": true,
-        "toml": true,
+    // AI & Agent
+    "agent_servers": {
+        "pi-acp": {
+            "default_config_options": {
+                "model": "proton-lumo/lumo-preview",
+                "thought_level": "medium",
+            },
+            "type": "registry",
+        },
+        "claude-acp": {
+            "default_config_options": {
+                "model": "default",
+                "mode": "acceptEdits",
+                "effort": "medium",
+            },
+            "type": "registry",
+        },
+    },
+    "agent": {
+        "threads_sidebar": {
+            "position": "right",
+        },
+        "default_model": {
+            "effort": "medium",
+            "provider": "zed.dev",
+            "model": "claude-opus-5-5",
+            "enable_thinking": true,
+        },
+        "button": true,
+        "dock": "right",
+        "single_file_review": false,
+        "tool_permissions": {
+            "default": "allow",
+        },
+        "default_profile": "write",
+    },
+    "edit_predictions": {
+        "mode": "eager",
+        "open_ai_compatible_api": {
+            "prompt_format": null,
+            "model": "lumo-lite",
+            "api_url": "https://lumo.proton.me/api/ai/v1",
+        },
+        "allow_data_collection": "no",
+        "provider": "zed",
+    },
+    "language_models": {
+        "openai_compatible": {
+            "Lumo": {
+                "api_url": "https://lumo.proton.me/api/ai/v1",
+                "available_models": [
+                    {
+                        "name": "lumo-lite",
+                        "max_tokens": 256000,
+                        "max_output_tokens": 32000,
+                        "max_completion_tokens": 256000,
+                        "capabilities": {
+                            "tools": true,
+                            "images": true,
+                            "parallel_tool_calls": false,
+                            "prompt_cache_key": false,
+                            "chat_completions": true,
+                            "interleaved_reasoning": false,
+                            "max_tokens_parameter": false,
+                        },
+                    },
+                    {
+                        "name": "lumo-max",
+                        "max_tokens": 256000,
+                        "max_output_tokens": 32000,
+                        "max_completion_tokens": 256000,
+                        "capabilities": {
+                            "tools": true,
+                            "images": true,
+                            "parallel_tool_calls": false,
+                            "prompt_cache_key": false,
+                            "chat_completions": true,
+                            "interleaved_reasoning": false,
+                            "max_tokens_parameter": false,
+                        },
+                    },
+                    {
+                        "name": "lumo-preview",
+                        "max_tokens": 512000,
+                        "max_output_tokens": 32000,
+                        "max_completion_tokens": 512000,
+                        "capabilities": {
+                            "tools": true,
+                            "images": true,
+                            "parallel_tool_calls": false,
+                            "prompt_cache_key": false,
+                            "chat_completions": true,
+                            "interleaved_reasoning": false,
+                            "max_tokens_parameter": false,
+                        },
+                    },
+                ],
+            },
+        },
     },
 }
