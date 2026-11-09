@@ -1,6 +1,7 @@
 PKG_DIR := packages
-# --no-folding is required: ~/.agents and ~/.pi/agent also receive files from the private work repo
-STOW_FLAGS := --no-folding
+# Stow flags, conflict handling and FIRST_INSTALL are in lib/stow-packages.sh
+# Every configure run is logged to ~/.dotfiles-logs (lib/with-log.sh)
+export FIRST_INSTALL
 
 COMMON_PACKAGES := stow-config ghostty zed agents fish-common espanso-common helix pi
 PERSONAL_PACKAGES := fish-personal git-personal ssh-personal zsh-personal
@@ -17,11 +18,11 @@ check-bun:
 # Common packages only. The work repo (dotfiles-work) calls this, then stows its own packages.
 stow-base: check-stow
 	@echo "🚛 Stowing common packages"
-	@stow $(STOW_FLAGS) -R -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES)
+	@./lib/stow-packages.sh $(PKG_DIR) $(COMMON_PACKAGES)
 
 stow-personal: check-stow
 	@echo "🚛 Stowing personal packages"
-	@stow $(STOW_FLAGS) -R -d $(PKG_DIR) -t ~ $(COMMON_PACKAGES) $(PERSONAL_PACKAGES)
+	@./lib/stow-packages.sh $(PKG_DIR) $(COMMON_PACKAGES) $(PERSONAL_PACKAGES)
 
 # done here to make sure that show ran and fish files are symlinked
 install-fish-plugins:
@@ -40,6 +41,9 @@ configure-base: check-brew
 	@$(MAKE) install-fish-plugins
 
 configure-personal: check-brew
+	@./lib/with-log.sh configure-personal $(MAKE) configure-personal-run
+
+configure-personal-run:
 	@./lib/setup.sh personal
 	@$(MAKE) stow-personal
 	@$(MAKE) install-fish-plugins

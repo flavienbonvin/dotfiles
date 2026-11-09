@@ -34,11 +34,27 @@ In order, this will:
 
 Two things to do by hand afterwards. The public key is saved to `~/Desktop/github.txt`. Add it to GitHub as a signing key, not only as an auth key, or your commits won't show as verified. Then open a new terminal so fish picks everything up.
 
-The SSH step refuses to run if keys already exist, so it never overwrites yours. Move them away first if you want new ones.
+The SSH step can be re-run: it keeps an existing key, creates only a missing one, and never overwrites anything.
+
+### Fresh Mac: existing config files
+
+A new Mac, or an app's first launch, can leave real files where a link should go (for example `~/.config/zed/settings.json`). Stow refuses to replace them and the run stops with the list of files. To move them to `~/.dotfiles-backup/<date>/` and carry on, add the flag:
+
+```sh
+make configure-personal FIRST_INSTALL=1
+```
+
+### Logs
+
+`make configure-personal` copies everything it prints to `~/.dotfiles-logs/configure-personal-<date>.log` (`configure-personal-latest.log` is the last run), with the macOS version and git revisions at the top. If a run fails, share `tail -60 ~/.dotfiles-logs/configure-personal-latest.log`.
+
+### Re-running after a failure
+
+Every step is safe to repeat. If a run stopped halfway, fix the cause and run the same command again.
 
 ## Work laptop
 
-Run `make configure-base` through the private work repo instead (`make configure` there). It calls this repo's `configure-base`, then adds the work packages on top. Stow runs with `--no-folding` because both repos write into `~/.agents` and `~/.pi/agent`.
+Run `make configure` in the private work repo instead. It calls this repo's `configure-base`, then adds the work packages on top. Both repos must sit side by side (`~/Developer/dotfiles` and `~/Developer/dotfiles-work`), or pass `DOTFILES=<path>`. All stowing goes through `lib/stow-packages.sh`, which uses `--no-folding` because both repos write into `~/.agents` and `~/.pi/agent`, and handles `FIRST_INSTALL=1`.
 
 ## Day to day
 
@@ -46,6 +62,7 @@ Run `make configure-base` through the private work repo instead (`make configure
 | --------------------------- | ------------------------------------------------------- |
 | `make stow-personal`        | Link the personal dotfiles, nothing else                |
 | `make stow-base`            | Link the shared packages only (used by the work repo)   |
+| `make ... FIRST_INSTALL=1`  | Back up files that block the links, then stow           |
 | `make install-fish-plugins` | Install Fisher and the plugins listed in `fish_plugins` |
 | `make install-lsp`          | Reinstall the language servers                          |
 | `make install-skills`       | Install or update third-party agent skills              |
