@@ -4,9 +4,10 @@
     "enabledModels": [
         "proton-lumo/lumo-max",
         "proton-lumo/lumo-lite",
-        "proton-lumo/lumo-preview",
         "anthropic/claude-opus-5-5",
-        "anthropic/claude-sonnet-5-5"
+        "anthropic/claude-sonnet-5-5",
+        "openai-codex/gpt-6.1-sol",
+        "openai-codex/gpt-6.1-terra"
     ],
     "packages": [
         "npm:pi-rtk-optimizer",
@@ -21,7 +22,8 @@
     "extensionChangelogVersions": {
         "{\"source\":\"npm:pi-rtk-optimizer\",\"scope\":\"user\"}": "0.9.0",
         "{\"source\":\"npm:pi-memory\",\"scope\":\"user\"}": "0.4.2",
-        "{\"source\":\"npm:pi-subagents\",\"scope\":\"user\"}": "0.87.0"
+        "{\"source\":\"npm:pi-subagents\",\"scope\":\"user\"}": "0.88.0"
     },
-    "tuiMode": "fullscreen"
+    "tuiMode": "fullscreen",
+    "deviceId": "284ce44a-8f7c-4590-b6dc-fa8e5addb5d9"
 }
