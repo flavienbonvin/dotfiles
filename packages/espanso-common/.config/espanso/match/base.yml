@@ -6,3 +6,11 @@ matches:
         type: date
         params:
           format: "%m/%d/%Y"
+
+  - trigger: ":11"
+    replace: "1-1 Germain {{d}}"
+    vars:
+      - name: d
+        type: date
+        params:
+          format: "%y.%m.%d"
